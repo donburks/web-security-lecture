@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Posts</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h2>Posts</h2>
+    <section id="postlist">
+    <% posts.forEach(post => { %>
+      <article>
+        <header><a href="/posts/<%= post.id %>" title="<%= post.title %>"><%= post.title %></a></header>
+        <p><%= post.body.split(' ').slice(0, 25).join(' ') %>...</p>
+      </article>
+    <% }); %>
+    </section>
+  </body>
+</html>

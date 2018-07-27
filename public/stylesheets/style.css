@@ -1,0 +1,64 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+form fieldset {
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto; }
+
+form label {
+  display: inline-block;
+  min-width: 7em;
+  font-size: 1.3em;
+  vertical-align: top; }
+
+form input {
+  min-width: 400px;
+  height: 35px;
+  font-size: 1.8em;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding-left: 8px; }
+
+form button {
+  width: 7em;
+  background-color: green;
+  border: 1px solid lightgreen;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px; }
+
+form button.wide {
+  width: 10em; }
+
+form textarea {
+  font-size: 1.1em;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding-left: 8px;
+  margin-top: 18px; }
+
+#postlist {
+  width: 85%;
+  margin: 0 auto; }
+  #postlist article {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px; }
+    #postlist article header {
+      font-size: 1.4em; }
+      #postlist article header a {
+        color: grey;
+        text-decoration: none; }
+    #postlist article p {
+      color: black; }
+    #postlist article:hover {
+      border: 1px solid lightgrey;
+      border-radius: 10px; }
+
+/*# sourceMappingURL=style.css.map */

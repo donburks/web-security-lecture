@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% if (loggedIn) { %>
+      <a href="/posts">View the posts</a><br />
+      <a href="/posts/new">Create a new post</a><br />
+      <a href="/logout">Log out</a>
+    <% } else { %>
+      <a href="/login">Log in</a>
+    <% } %>
+    <% if (admin) { %>
+      <p class="admin">You're an admin!</p>
+    <% } %>
+  </body>
+</html>

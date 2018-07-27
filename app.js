@@ -1,9 +1,17 @@
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
+
+//Use helmet to help with security
+
+//I recommend using pino instead of morgan.
 const logger = require('morgan');
+
+//Use cookie-session instead
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+
+//We saw from npm audit that this had vulnerabilities in one of its dependencies (hoek)
 const sassMiddleware = require('node-sass-middleware');
 
 const db    = require('./db');
@@ -31,17 +39,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 
-// catch 404 and forward to error handler
+// This should be logged
 app.use((req, res, next) => {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
-// error handler
+// error handler should be logged too
 app.use((err, req, res, next) => {
-  // set locals, only providing error in development
   res.locals.message = err.message;
+  //Different behaviour in development vs production
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
